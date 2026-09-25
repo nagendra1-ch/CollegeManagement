@@ -1,0 +1,300 @@
+* {
+    box-sizing: border-box;
+}
+
+.student-profile {
+    min-height: 100vh;
+    background: #f5f7fb;
+    padding: 35px;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #1f2937;
+}
+
+/* Header */
+
+.profile-header {
+    max-width: 1100px;
+    margin: 0 auto 25px;
+    background: white;
+    padding: 25px 30px;
+    border-radius: 16px;
+    display: flex;
+    align-items: center;
+    gap: 18px;
+    border: 1px solid #e5e7eb;
+}
+
+.profile-avatar {
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    background: #2563eb;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.profile-header h1 {
+    margin: 0 0 6px;
+    font-size: 25px;
+}
+
+.profile-header p {
+    margin: 0;
+    color: #6b7280;
+    font-size: 15px;
+}
+
+/* Student information */
+
+.profile-card {
+    max-width: 1100px;
+    margin: 0 auto 30px;
+    background: white;
+    border-radius: 16px;
+    border: 1px solid #e5e7eb;
+    overflow: hidden;
+}
+
+.card-title {
+    padding: 22px 28px;
+    border-bottom: 1px solid #e5e7eb;
+}
+
+.card-title h2 {
+    margin: 0;
+    font-size: 19px;
+}
+
+.details-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 0;
+}
+
+.detail-item {
+    padding: 22px 25px;
+    border-right: 1px solid #e5e7eb;
+    border-bottom: 1px solid #e5e7eb;
+}
+
+.detail-item span {
+    display: block;
+    color: #6b7280;
+    font-size: 13px;
+    margin-bottom: 7px;
+}
+
+.detail-item strong {
+    font-size: 15px;
+    color: #111827;
+    word-break: break-word;
+}
+
+/* Subjects */
+
+.subjects-section {
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.section-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 18px;
+}
+
+.section-header h2 {
+    margin: 0 0 5px;
+    font-size: 21px;
+}
+
+.section-header p {
+    margin: 0;
+    color: #6b7280;
+    font-size: 14px;
+}
+
+.subject-count {
+    background: #e8f0ff;
+    color: #2563eb;
+    padding: 9px 15px;
+    border-radius: 20px;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+/* Table */
+
+.subjects-table {
+    background: white;
+    border: 1px solid #e5e7eb;
+    border-radius: 16px;
+    overflow: hidden;
+}
+
+.table-header,
+.table-row {
+    display: grid;
+    grid-template-columns: 2.5fr 1.2fr 1.3fr 0.7fr;
+    align-items: center;
+}
+
+.table-header {
+    background: #f9fafb;
+    color: #6b7280;
+    font-size: 13px;
+    font-weight: 600;
+    padding: 16px 22px;
+    border-bottom: 1px solid #e5e7eb;
+}
+
+.table-row {
+    padding: 18px 22px;
+    border-bottom: 1px solid #edf0f3;
+    font-size: 14px;
+}
+
+.table-row:last-child {
+    border-bottom: none;
+}
+
+.table-row:hover {
+    background: #fafcff;
+}
+
+/* Subject name */
+
+.subject-name {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.subject-icon {
+    width: 40px;
+    height: 40px;
+    border-radius: 10px;
+    background: #eff6ff;
+    color: #2563eb;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+}
+
+.subject-name strong {
+    color: #111827;
+    font-size: 14px;
+}
+
+.subject-code {
+    color: #4b5563;
+    font-weight: 500;
+}
+
+/* Grade */
+
+.grade {
+    width: 38px;
+    height: 38px;
+    border-radius: 10px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    font-size: 15px;
+}
+
+.grade-A {
+    background: #dcfce7;
+    color: #15803d;
+}
+
+.grade-B {
+    background: #dbeafe;
+    color: #1d4ed8;
+}
+
+.grade-C {
+    background: #fef3c7;
+    color: #b45309;
+}
+
+.grade-D {
+    background: #fee2e2;
+    color: #b91c1c;
+}
+
+/* Responsive */
+
+@media (max-width: 850px) {
+
+    .student-profile {
+        padding: 20px;
+    }
+
+    .details-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .table-header,
+    .table-row {
+        grid-template-columns: 2fr 1fr 1fr 0.6fr;
+    }
+}
+
+@media (max-width: 600px) {
+
+    .student-profile {
+        padding: 12px;
+    }
+
+    .profile-header {
+        padding: 20px;
+    }
+
+    .profile-avatar {
+        width: 55px;
+        height: 55px;
+        font-size: 22px;
+    }
+
+    .profile-header h1 {
+        font-size: 20px;
+    }
+
+    .details-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .detail-item {
+        border-right: none;
+    }
+
+    .section-header {
+        align-items: flex-start;
+        gap: 10px;
+    }
+
+    .table-header {
+        display: none;
+    }
+
+    .table-row {
+        display: block;
+        padding: 18px;
+    }
+
+    .table-row > div {
+        margin-bottom: 12px;
+    }
+
+    .table-row > div:last-child {
+        margin-bottom: 0;
+    }
+}

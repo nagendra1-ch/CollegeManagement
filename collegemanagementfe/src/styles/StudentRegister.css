@@ -1,0 +1,424 @@
+/* =========================
+   GLOBAL
+========================= */
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+
+/* =========================
+   PAGE
+========================= */
+
+.register-page {
+  min-height: 100vh;
+  width: 100%;
+
+  background: #f4f7fb;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  padding: 40px 20px;
+}
+
+
+/* =========================
+   REGISTRATION CARD
+========================= */
+
+.register-container {
+  width: 100%;
+  max-width: 900px;
+
+  background: #ffffff;
+
+  padding: 40px;
+
+  border-radius: 18px;
+
+  box-shadow: 0 10px 35px rgba(0, 0, 0, 0.08);
+}
+
+
+/* =========================
+   HEADER
+========================= */
+
+.register-header {
+  text-align: center;
+  margin-bottom: 35px;
+}
+
+.register-icon {
+  width: 65px;
+  height: 65px;
+
+  margin: 0 auto 15px;
+
+  border-radius: 50%;
+
+  background: #e8f1ff;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  font-size: 30px;
+}
+
+.register-header h2 {
+  margin: 0;
+
+  color: #172554;
+
+  font-size: 30px;
+}
+
+.register-header p {
+  margin-top: 8px;
+
+  color: #64748b;
+
+  font-size: 15px;
+}
+
+
+/* =========================
+   FORM
+========================= */
+
+.form-grid {
+  display: grid;
+
+  grid-template-columns: 1fr 1fr;
+
+  gap: 22px;
+}
+
+
+/* =========================
+   FORM GROUP
+========================= */
+
+.form-group {
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 7px;
+}
+
+.form-group label {
+  font-size: 14px;
+
+  font-weight: 600;
+
+  color: #334155;
+}
+
+
+/* =========================
+   INPUTS
+========================= */
+
+.form-group input,
+.form-group select {
+  width: 100%;
+
+  height: 48px;
+
+  padding: 0 14px;
+
+  border: 1px solid #d7dee8;
+
+  border-radius: 8px;
+
+  outline: none;
+
+  background: #ffffff;
+
+  color: #1e293b;
+
+  font-size: 15px;
+
+  transition: 0.2s ease;
+}
+
+
+/* Focus */
+
+.form-group input:focus,
+.form-group select:focus {
+  border-color: #2563eb;
+
+  box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1);
+}
+
+
+/* Placeholder */
+
+.form-group input::placeholder {
+  color: #94a3b8;
+}
+
+
+/* =========================
+   FULL WIDTH
+========================= */
+
+.full-width {
+  grid-column: span 2;
+}
+
+
+/* =========================
+   BUTTON
+========================= */
+
+.register-btn {
+  width: 100%;
+
+  height: 50px;
+
+  margin-top: 30px;
+
+  border: none;
+
+  border-radius: 8px;
+
+  background: #2563eb;
+
+  color: white;
+
+  font-size: 16px;
+
+  font-weight: 600;
+
+  cursor: pointer;
+
+  transition: 0.2s ease;
+}
+
+.register-btn:hover {
+  background: #1d4ed8;
+
+  transform: translateY(-1px);
+}
+
+.register-btn:active {
+  transform: translateY(0);
+}
+
+
+/* =====================================================
+   TABLET
+   768px - 1024px
+===================================================== */
+
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+
+  .register-page {
+    padding: 30px 25px;
+
+    align-items: flex-start;
+  }
+
+  .register-container {
+    max-width: 750px;
+
+    margin-top: 30px;
+
+    padding: 32px;
+  }
+
+  .register-header {
+    margin-bottom: 28px;
+  }
+
+  .register-header h2 {
+    font-size: 27px;
+  }
+
+  .form-grid {
+    grid-template-columns: 1fr 1fr;
+
+    gap: 18px;
+  }
+
+  .form-group input,
+  .form-group select {
+    height: 46px;
+
+    font-size: 14px;
+  }
+
+  .register-btn {
+    height: 48px;
+  }
+}
+
+
+/* =====================================================
+   MOBILE
+   481px - 767px
+===================================================== */
+
+@media screen and (min-width: 481px) and (max-width: 767px) {
+
+  .register-page {
+    padding: 25px 18px;
+
+    align-items: flex-start;
+  }
+
+  .register-container {
+    max-width: 600px;
+
+    margin-top: 20px;
+
+    padding: 28px 24px;
+
+    border-radius: 14px;
+  }
+
+  .register-header {
+    margin-bottom: 25px;
+  }
+
+  .register-icon {
+    width: 58px;
+    height: 58px;
+
+    font-size: 26px;
+  }
+
+  .register-header h2 {
+    font-size: 24px;
+  }
+
+  .register-header p {
+    font-size: 14px;
+  }
+
+  .form-grid {
+    grid-template-columns: 1fr;
+
+    gap: 17px;
+  }
+
+  .full-width {
+    grid-column: span 1;
+  }
+
+  .form-group input,
+  .form-group select {
+    height: 46px;
+
+    font-size: 14px;
+  }
+
+  .register-btn {
+    height: 48px;
+
+    margin-top: 25px;
+  }
+}
+
+
+/* =====================================================
+   SMALL MOBILE
+   Up to 480px
+===================================================== */
+
+@media screen and (max-width: 480px) {
+
+  .register-page {
+    min-height: 100vh;
+
+    padding: 15px 12px;
+
+    align-items: flex-start;
+  }
+
+  .register-container {
+    width: 100%;
+
+    margin-top: 10px;
+
+    padding: 22px 16px;
+
+    border-radius: 12px;
+
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.07);
+  }
+
+  .register-header {
+    margin-bottom: 22px;
+  }
+
+  .register-icon {
+    width: 52px;
+    height: 52px;
+
+    font-size: 23px;
+
+    margin-bottom: 10px;
+  }
+
+  .register-header h2 {
+    font-size: 21px;
+  }
+
+  .register-header p {
+    font-size: 13px;
+
+    line-height: 1.5;
+  }
+
+  .form-grid {
+    grid-template-columns: 1fr;
+
+    gap: 15px;
+  }
+
+  .full-width {
+    grid-column: span 1;
+  }
+
+  .form-group {
+    gap: 6px;
+  }
+
+  .form-group label {
+    font-size: 13px;
+  }
+
+  .form-group input,
+  .form-group select {
+    height: 44px;
+
+    padding: 0 12px;
+
+    font-size: 14px;
+
+    border-radius: 7px;
+  }
+
+  .register-btn {
+    height: 46px;
+
+    margin-top: 23px;
+
+    font-size: 15px;
+
+    border-radius: 7px;
+  }
+}
